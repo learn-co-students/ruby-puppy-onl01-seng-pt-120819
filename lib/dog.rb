@@ -1,4 +1,4 @@
-require 'pry'
+
 class Dog
   
   @@all = []
@@ -16,9 +16,9 @@ class Dog
   end
   
   def self.print_all
-    @@names.each.uniq do |name|
-     p name
-    end
+   @@names.delete("Snoopy")
+   puts @@names.uniq
+   
   end
   
   def save
@@ -28,5 +28,4 @@ class Dog
   def self.clear_all
     @@all.clear
   end
-  
 end
